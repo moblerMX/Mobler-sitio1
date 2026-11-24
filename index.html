@@ -406,6 +406,7 @@ html:not(.motion) .load{display:none}
 .cnav button:hover,.cnav button[aria-current]{opacity:1}.cnav button[aria-current]{border-bottom-color:currentColor}
 .track{padding-top:clamp(124px,15vh,160px)}
 .lead2{margin-top:10px;max-width:26em}
+@media(min-width:900px){.fab-t .lead2{display:none}}
 .v-g{position:absolute;inset:0;z-index:5;background:var(--ink);color:var(--sand);display:flex;flex-direction:column;min-height:0}
 .v-g-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:max(14px,env(safe-area-inset-top,0px)) 12px}.v-g-top h2{font-size:clamp(30px,3.4vw,56px)}
 .v-g-b{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:max(28px,env(safe-area-inset-bottom,0px))}
@@ -418,7 +419,7 @@ html:not(.motion) .load{display:none}
 .motion .fab{height:640vh}
 .steps .ns{display:none}.steps li.long{grid-template-columns:1fr;gap:4px}
 .plist li.lead{grid-column:1/-1}.plist li.lead .row{display:block;border-top:0;padding:0 0 clamp(14px,1.5vw,26px)}.plist li.lead .th{display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:78vh;object-fit:cover;object-position:42% 46%;margin-bottom:14px}.plist li.lead .m{display:none}
-@media (max-width:899px){.cp .pics{gap:8px}.cp .a,.cp .b{display:block;height:auto;width:min(42vw,calc(36svh*.8))}.steps{grid-template-columns:repeat(5,minmax(0,1fr));padding-bottom:7.4em;gap:6px}.steps li.long{display:block}.steps .nl{display:none}.steps .ns{display:inline}.steps .n{font-size:15px}.steps .d{top:60px}.plist li.lead .th{aspect-ratio:1/1}}
+@media (max-width:899px){.cp .pics{gap:8px}.cp .a,.cp .b{display:block;height:auto;width:min(42vw,calc(36svh*.8))}.steps{grid-template-columns:repeat(4,minmax(0,1fr));padding-bottom:7.4em;gap:6px}.steps li.long{display:block}.steps .nl{display:none}.steps .ns{display:inline}.steps .n{font-size:15px}.steps .d{top:60px}.plist li.lead .th{aspect-ratio:1/1}}
 .stage[data-sc="3"] .scrim::after{opacity:1}
 .scrim::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,31,32,0) 48%,rgba(35,31,32,.5) 74%,rgba(35,31,32,.62) 100%);opacity:0;transition:opacity .5s ease}.stage[data-sc="2"] .scrim::after{opacity:1}
 .hnav a.wa-h{display:inline-flex;align-items:center;min-height:44px}.hnav a.wa-h[hidden]{display:none}
@@ -566,11 +567,10 @@ html:not(.motion) .load{display:none}
       </div>
       <div>
         <ol class="steps" id="steps">
-          <li><img src="assets/sketch-m.webp" srcset="assets/sketch-s.webp 640w,assets/sketch-m.webp 933w,assets/sketch.webp 1024w" sizes="25vw" width="1024" height="1536" alt="Mano dibujando una silla en una libreta" loading="lazy" decoding="async"><span class="n">Dibujo</span><span class="d">Boceto a mano.</span></li>
-          <li class="long"><img src="assets/blender-m.webp" srcset="assets/blender-s.webp 640w,assets/blender-m.webp 1350w,assets/blender.webp 1350w" sizes="25vw" width="1350" height="880" alt="Modelo 3D de una silla en la pantalla de una computadora" loading="lazy" decoding="async"><span class="n"><span class="nl">Diseño digital y modelado 3D</span><span class="ns">Modelado 3D</span></span><span class="d">Transformamos los bocetos en modelos digitales tridimensionales, donde estudiamos proporciones, geometrías, materiales y detalles constructivos antes de iniciar la fabricación.</span></li>
-          <li><img src="assets/det-corner-m.webp" srcset="assets/det-corner-s.webp 640w,assets/det-corner-m.webp 1254w,assets/det-corner.webp 1254w" sizes="25vw" width="1254" height="1254" alt="Esquina de mesa de madera" loading="lazy" decoding="async"><span class="n">Materia</span><span class="d">Veta de la madera.</span></li>
-          <li><img src="assets/det-cane-m.webp" srcset="assets/det-cane-s.webp 640w,assets/det-cane-m.webp 1400w,assets/det-cane.webp 1485w" sizes="25vw" width="1485" height="1485" alt="Encuentro de brazo y respaldo de rejilla" loading="lazy" decoding="async"><span class="n">Unión</span><span class="d">Encuentro de brazo y rejilla.</span></li>
-          <li><img src="assets/chair-dress-m.webp" srcset="assets/chair-dress-s.webp 640w,assets/chair-dress-m.webp 933w,assets/chair-dress.webp 1024w" sizes="25vw" width="1024" height="1536" alt="Silla terminada en un jardín" loading="lazy" decoding="async"><span class="n">Pieza</span><span class="d">Silla terminada.</span></li>
+          <li class="long"><img src="assets/sketch-m.webp" srcset="assets/sketch-s.webp 640w,assets/sketch-m.webp 933w,assets/sketch.webp 1024w" sizes="25vw" width="1024" height="1536" alt="Mano dibujando una silla en una libreta" loading="lazy" decoding="async"><span class="n"><span class="nl">Dibujo</span><span class="ns">Dibujo</span></span><span class="d">Empezamos con una cita con nuestros diseñadores. Escuchamos cómo vive su espacio, tomamos medidas y bocetamos a mano las primeras ideas.</span></li>
+          <li class="long"><img src="assets/blender-m.webp" srcset="assets/blender-s.webp 640w,assets/blender-m.webp 1350w,assets/blender.webp 1350w" sizes="25vw" width="1350" height="880" alt="Modelo 3D de una silla en la pantalla de una computadora" loading="lazy" decoding="async"><span class="n"><span class="nl">Modelado 3D</span><span class="ns">Modelado 3D</span></span><span class="d">Convertimos el boceto en un modelo digital. Con él revisamos juntos proporciones, medidas y detalles de construcción, y ajustamos hasta que la pieza sea exactamente la que su espacio necesita.</span></li>
+          <li class="long"><img src="assets/det-corner-m.webp" srcset="assets/det-corner-s.webp 640w,assets/det-corner-m.webp 1254w,assets/det-corner.webp 1254w" sizes="25vw" width="1254" height="1254" alt="Esquina de mesa de madera" loading="lazy" decoding="async"><span class="n"><span class="nl">Elección de materiales</span><span class="ns">Materiales</span></span><span class="d">Definimos con usted la madera, la tinta y los acabados. Lo que se aprueba es lo que se fabrica: sin sorpresas al recibir la pieza.</span></li>
+          <li class="long"><img src="assets/det-cane-m.webp" srcset="assets/det-cane-s.webp 640w,assets/det-cane-m.webp 1400w,assets/det-cane.webp 1485w" sizes="25vw" width="1485" height="1485" alt="Encuentro de brazo y respaldo de rejilla" loading="lazy" decoding="async"><span class="n"><span class="nl">Fabricación</span><span class="ns">Fabricación</span></span><span class="d">Con el diseño aprobado, la pieza pasa a fabricación en Mérida con los materiales acordados. El tiempo de entrega de referencia es de 8 semanas.</span></li>
         </ol>
         <a class="go" href="#contacto" data-svc="carpinteria"><span>Cotizar proyecto</span><svg aria-hidden="true"><use href="#ar"/></svg></a>
       </div>
@@ -951,7 +951,7 @@ $('#ctxX').onclick=function(){setCtx(null)};
 /* ---------- Motor de scroll: valores cacheados; el ciclo duerme cuando nada cambia ---------- */
 var heroOut=false,heroSt=null,fabSt=null,ys=scrollY,tops={},vw=innerWidth,vh=innerHeight,small=isSmall(),booting=true,looping=false;
 var tall=innerHeight>innerWidth&&innerWidth<1024;
-var seq=tall?['dining-p','chair-dress','closet','parametric']:['dining','chair-salt','closet','parametric'],fabSeq=['sketch','blender|c','det-corner','det-cane','chair-dress'];
+var seq=tall?['dining-p','chair-dress','closet','parametric']:['dining','chair-salt','closet','parametric'],fabSeq=['sketch','blender|c','det-corner','det-cane'];
 var hIntro=$('#hIntro'),scenes=$$('.h-sc'),railA=$$('#rail a'),curS=-1,curStep=-1;
 var track=$('#track'),colS=$('#colecciones'),colPin=$('#colPin'),fabS=$('#fabricacion'),fabWin=$('#fabWin'),steps=$$('#steps li'),hdr=$('#hdr'),bark=$('#barkI'),cfgI=$('#cfgI');
 var bands=[],curBand='',mx=0,fabLoaded=false;
