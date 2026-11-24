@@ -1,0 +1,15 @@
+// Sitio estático de Møbler servido por Cloudflare (Workers con archivos estáticos).
+// Lo usa el despliegue automático de Cloudflare al recibir cambios en la rama main.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mobler-sitio1",
+  "compatibility_date": "2026-11-23",
+  "observability": { "enabled": true },
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

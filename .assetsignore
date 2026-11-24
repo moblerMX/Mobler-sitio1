@@ -1,0 +1,8 @@
+.git
+.gitignore
+.assetsignore
+.htaccess
+wrangler.jsonc
+redirecciones.json
+node_modules
+.wrangler
