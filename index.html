@@ -105,7 +105,26 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacin
 @media(max-width:699px){.hnav .cta{display:none}}
 .menu{position:fixed;inset:0;z-index:45;overflow:auto;overscroll-behavior:contain;background:var(--green);color:var(--sand);display:flex;flex-direction:column;justify-content:center;gap:6px;padding-block:90px 40px;transition:clip-path .9s var(--ease-io);clip-path:inset(0 0 0 0)}
 .menu[hidden]{display:none!important}
-.menu a{font-family:var(--serif);font-size:clamp(38px,11vw,64px);line-height:1.2;text-decoration:none}
+.menu{justify-content:flex-start;gap:0;padding-block:calc(84px + env(safe-area-inset-top,0px)) max(22px,env(safe-area-inset-bottom,0px))}
+.menu a{text-decoration:none;color:inherit}
+.m-main{border-bottom:1px solid rgba(224,216,204,.22)}
+.mi{display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:4px;min-height:58px;padding:10px 0;border-top:1px solid rgba(224,216,204,.22);font:400 clamp(23px,6.4vw,36px)/1.15 var(--serif)}
+.mi small{font:500 12px/1 var(--sans);letter-spacing:.16em;opacity:.62;align-self:center}
+.mi svg{width:22px;height:15px;fill:none;stroke:currentColor;stroke-width:1.3;opacity:.7;transition:transform .4s var(--ease)}
+.mi:active svg,.mi:hover svg{transform:translateX(5px)}
+.m-sub{margin-top:26px}
+.m-k{font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;opacity:.62;margin:0 0 8px}
+.m-g{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.m-g a{font:400 16px/1.3 var(--sans);min-height:42px;display:flex;align-items:center}
+.m-cta{margin-top:auto;padding-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.m-b{display:flex;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:0 14px;background:var(--sand);color:var(--green)!important;font:500 15px/1.2 var(--sans);letter-spacing:.02em}
+.m-b.o{background:transparent;color:var(--sand)!important;border:1px solid rgba(224,216,204,.6)}
+.m-b[hidden]{display:none}
+.m-cta .m-b:only-of-type,.m-cta .m-b:first-child:nth-last-child(2){grid-column:1/-1}
+.m-i{grid-column:1/-1;margin:6px 0 0;font:400 13px/1.4 var(--sans);opacity:.7}
+@keyframes mIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.motion .menu:not([hidden]) .mi,.motion .menu:not([hidden]) .m-sub,.motion .menu:not([hidden]) .m-cta{animation:mIn .8s var(--ease) both;animation-delay:calc(.12s + var(--i)*65ms)}
+@media(min-width:700px){.menu{padding-inline:max(var(--gut),8vw)}.m-g{grid-template-columns:repeat(4,1fr)}}
 
 /* Hero */
 .hero{position:relative;background:var(--ink);color:var(--paper)}
@@ -461,12 +480,10 @@ html:not(.motion) .load{display:none}
   </nav>
 </header>
 <nav class="menu gut" id="menu" hidden aria-label="Menú">
-  <a href="#colecciones">Mobiliario</a>
-  <a href="#fabricacion">Carpintería a medida</a>
-  <a href="#proyectos">Interiorismo integral</a>
-  <a href="#configurador">Configurador</a>
-  <a href="#contacto">Solicitar información</a>
-  <a data-wa="default" href="#contacto" hidden>WhatsApp</a>
+  <div class="m-main"><a class="mi" href="#colecciones" style="--i:0"><small>01</small><span>Mobiliario</span><svg aria-hidden="true"><use href="#ar"/></svg></a><a class="mi" href="#fabricacion" style="--i:1"><small>02</small><span>Carpintería a medida</span><svg aria-hidden="true"><use href="#ar"/></svg></a><a class="mi" href="#proyectos" style="--i:2"><small>03</small><span>Interiorismo integral</span><svg aria-hidden="true"><use href="#ar"/></svg></a><a class="mi" href="#configurador" style="--i:3"><small>04</small><span>Configurador</span><svg aria-hidden="true"><use href="#ar"/></svg></a></div>
+  <div class="m-sub" style="--i:5"><p class="m-k">Explorar</p><div class="m-g"><a href="piezas/">Catálogo completo</a><a href="piezas/sillas/">Sillas</a><a href="piezas/mesas-de-comedor/">Mesas de comedor</a><a href="piezas/credenzas/">Credenzas</a><a href="piezas/sofas/">Sofás</a><a href="showrooms/">Showrooms</a><a href="preguntas-frecuentes/">Preguntas frecuentes</a><a href="blog/">Blog</a></div></div>
+  <div class="m-cta" style="--i:6"><a class="m-b" href="#contacto">Solicitar información</a><a class="m-b o" data-wa="default" href="#contacto" hidden>WhatsApp</a>
+    <p class="m-i">Showrooms Pocito y Copó, Mérida · 10:00 a 19:00 h</p></div>
 </nav>
 
 <main id="main">
