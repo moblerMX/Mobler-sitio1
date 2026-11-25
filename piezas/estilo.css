@@ -29,6 +29,9 @@ ul.md{margin:0;padding:0;list-style:none;display:grid;gap:4px}ul.md i{color:var(
 .cta.row{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:720px}
 footer{border-top:1px solid var(--line);margin-top:48px;padding:28px 0 40px;font-size:15px;color:var(--muted)}
 footer .w{display:grid;gap:6px}
+.fl{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px}.fl a{min-height:32px;display:inline-flex;align-items:center}
+.fams{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 28px}.fams a{border:1px solid var(--line);padding:8px 14px;text-decoration:none;font-size:15px}.fams a[aria-current]{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.srm{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:8px 0 32px}.srm section{border-top:1px solid var(--line);padding-top:16px}.srm h2{margin:0 0 10px}.srm p{margin:0 0 8px}
 @media (max-width:760px){.pz{grid-template-columns:1fr;gap:24px}nav.top a{margin-left:10px;font-size:14px}header.top .w{flex-wrap:wrap;padding-block:10px}nav.top{display:flex;flex-wrap:wrap;gap:4px 0}}
 
 .tw{overflow-x:auto;margin:0 0 16px}.tw table{border-collapse:collapse;width:100%;font-size:15px}.tw th,.tw td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line)}.tw th{font-weight:500;color:var(--muted)}
